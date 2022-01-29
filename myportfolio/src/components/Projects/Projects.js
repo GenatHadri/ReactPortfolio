@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import ProjectCard from "./ProjectCards";
-import Particle from "../Particle";
+// import Particle from "../Particle";
 
 import RelaxRestaurant from "../../Assets/Projects/RelaxRestaurant.png";
 import NetflixClone from "../../Assets/Projects/NetflixClone.png";
@@ -15,7 +15,7 @@ import FastFood from "../../Assets/Projects/FastFood.png";
 function Projects() {
   return (
     <Container fluid className="project-section">
-      <Particle />
+      {/* <Particle /> */}
       <Container>
         <h1 className="project-heading">
           My Recent <strong className="orange">Works </strong>
@@ -26,19 +26,10 @@ function Projects() {
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
           <Col md={3} className="project-card">
             <ProjectCard
-              imgPath={RelaxRestaurant}
-              title="Relax Restaurant"
-              description="A Restaurant Website built with Wordpress, where you can look to the menu and book a table."
-              link="https://github.com/GenatHadri/RestaurantWebsiteWP"
-            />
-          </Col>
-
-          <Col md={3} className="project-card">
-            <ProjectCard
               imgPath={NetflixClone}
               title="Netflix Clone"
               description="Netflix Website Clone, built with ReactJs and getting the data
-              from an API."
+              from an API. It also has a trailer popup feature."
               link="https://github.com/GenatHadri/Netflix-clone"
             />
           </Col>
@@ -48,7 +39,7 @@ function Projects() {
               imgPath={AmazonClone}
               title="AmazonClone"
               description="Amazon Website Clone, built with ReactJs and getting the data from
-              an API."
+              an API. It also has the basket and checkout feature."
               link="https://github.com/GenatHadri/amazon"
             />
           </Col>
@@ -75,13 +66,24 @@ function Projects() {
 
           <Col md={3} className="project-card">
             <ProjectCard
+              imgPath={RelaxRestaurant}
+              title="Relax Restaurant"
+              description="A Restaurant Website built with Wordpress, where you can look at the menu.
+              An user can also contact the restaurant staff and book a table. It also has many plugins for example
+              for the site speed, site security, SEO, google analytics etc"
+              link="https://github.com/GenatHadri/RestaurantWebsiteWP"
+            />
+          </Col>
+
+          <Col md={3} className="project-card">
+            <ProjectCard
               imgPath={Filma24}
               title="Filma24"
-              description="A movie website called Filma24 build with ReactJs and getting all
+              description="A movie website called Filma24 built with ReactJs and getting all
               data from an API.
               Movies on the first page are from the Tranding category, but you
               can choose other categories as well, only by clicking on the
-              Zhanri button ."
+              Zhanri button and selecting the specific category."
               link="https://github.com/GenatHadri/Filma24-React"
             />
           </Col>
@@ -92,10 +94,9 @@ function Projects() {
               title="Mr Fisher Restaurant"
               description="A Restaurant Website called Mr Fisher built with HTML, CSS, JS and
               PHP. 
-              What characterize this website, are the animations on it. You can
-              login and contact with the fast food staff and see the client
+              An user can login and contact with the fast food staff and see the client
               reviews. If you have the admin priviledge you can manage all the
-              users and posts."
+              users and posts. It also has some cool animations."
               link="https://github.com/BlinSahatqija/MrFisher-WebMultimedia"
             />
           </Col>

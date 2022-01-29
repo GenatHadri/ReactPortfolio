@@ -18,6 +18,62 @@ html {
   color: var(--imp-text-color) !important;
 }
 
+/* --  Preloader -- */
+
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999999;
+  background-color: #0c0513;
+  background-image: url(./Assets/pre.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#preloader-none {
+  opacity: 0;
+}
+
+#no-scroll {
+  overflow: hidden;
+  height: 100vh;
+}
+
+/* -- Scrollbar -- */
+
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 177, 59, 0.959);
+  border-radius: 12px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 162, 22, 0.959);
+  border-radius: 12px;
+}
+
+/* -- Navbar Section --  */
+
+.sticky {
+  background-color: #212038d8 !important;
+  transition: all 0.3s ease-out 0s !important;
+  box-shadow: 0px 10px 10px 0px rgba(9, 5, 29, 0.171) !important;
+  backdrop-filter: blur(15px) !important;
+}
+
 .navbar {
   position: fixed !important;
   transition: all 0.3s ease-out 0s !important;
@@ -77,6 +133,20 @@ html {
   opacity: 0.9 !important;
 }
 
+@media (max-width: 767px) {
+  .navbar {
+    padding: 1rem 2rem !important;
+    font-size: 1.4rem !important;
+    background-color: #181a27 !important;
+  }
+  .navbar-nav .nav-item a::after {
+    display: none !important;
+  }
+}
+.navbar-brand {
+  color: rgb(250, 250, 250) !important;
+}
+
 .logo {
   height: 1.4em !important;
   width: 2.5em !important;
@@ -90,6 +160,12 @@ html {
 
 .nav-link {
   padding: 0.8rem 1rem !important;
+}
+
+@media (max-width: 767px) {
+  .nav-link {
+    padding: 0.7rem 1rem !important;
+  }
 }
 
 .navbar-nav .nav-item {
@@ -121,6 +197,8 @@ html {
 .navbar-nav .nav-item a:hover::after {
   width: 100%;
 }
+
+/* -- Home section -- */
 
 .wave {
   animation-name: wave-animation;
@@ -225,6 +303,13 @@ html {
   padding-top: 9em !important;
 }
 
+@media (max-width: 767px) {
+  .myAvtar {
+    padding-top: 2em !important;
+    padding-bottom: 2em !important;
+  }
+}
+
 .home-about-section {
   position: relative;
   padding-bottom: 70px !important;
@@ -304,6 +389,48 @@ html {
 
 .icon-color {
   color: #6d4a00 !important;
+}
+
+/* -- Footer -- */
+
+.footer {
+  background-color: rgba(8, 0, 34, 0.904);
+  bottom: 0 !important;
+  padding-top: 10px !important;
+  padding-bottom: 8px !important ;
+}
+.footer-copywright {
+  text-align: center !important;
+}
+
+.footer-body {
+  text-align: center !important;
+}
+
+@media (max-width: 767px) {
+  .footer-copywright {
+    text-align: center !important;
+  }
+
+  .footer-body {
+    text-align: center !important;
+  }
+}
+
+.footer h3 {
+  font-size: 1em;
+  color: white !important;
+  margin-top: 0.5em !important;
+  margin-bottom: 0.5em !important;
+}
+.footer-icons {
+  margin-top: 0.5em !important;
+  margin-bottom: 0.5em !important;
+  padding: 0 !important;
+}
+
+.blockquote-footer {
+  color: #230341 !important;
 }
 
 /* -- Projects -- */
@@ -390,6 +517,12 @@ html {
   transition: all 0.4s ease 0s !important;
 }
 
+@media (max-width: 767px) {
+  .tech-icons {
+    margin: 10px !important;
+  }
+}
+
 .tech-icons:hover {
   transform: scale(1.05) !important;
   overflow: hidden !important;
@@ -410,4 +543,55 @@ html {
   list-style: none !important;
   text-align: left !important;
   padding-left: 1px !important;
+}
+
+@media (max-width: 767px) {
+  .about-img {
+    padding-top: 0 !important;
+  }
+}
+
+/* -- Contact -- */
+
+.contact-section {
+  position: relative !important;
+  padding-top: 150px !important;
+  padding-bottom: 30px !important;
+  background-image: var(--section-background-color) !important;
+  color: white;
+}
+
+.form {
+  /* height: 100vh; */
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.form > h1 {
+  margin-bottom: 20px;
+}
+
+.form > input {
+  height: 30px;
+  margin-bottom: 15px;
+}
+
+.form > textarea {
+  margin-bottom: 30px;
+}
+
+.form > label {
+  text-align: start;
+}
+
+.form > button {
+  background: #ffb71b;
+  border-radius: 2px;
+  width: 100%;
+  height: 30px;
+  border: 1px solid;
+  margin-top: 10px;
+  border-color: #a88734 #9c7e31 #846a29;
+  cursor: pointer;
 }
