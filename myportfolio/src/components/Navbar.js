@@ -89,7 +89,7 @@ function NavBar() {
             <Nav.Item>
               <Nav.Link
                 as={Link}
-                to={{ pathname: "https://docdro.id/ydCfDfd" }}
+                to={{ pathname: "https://docdro.id/op7i1uy" }}
                 target="_blank"
                 onClick={() => updateExpanded(false)}
               >

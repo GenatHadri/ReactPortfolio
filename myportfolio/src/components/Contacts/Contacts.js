@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-// import Particle from "../Particle";
 import { db } from "../../firebase";
 function Contacts() {
   const [name, setName] = useState("");
@@ -29,7 +28,6 @@ function Contacts() {
   };
   return (
     <Container fluid className="contact-section">
-      {/* <Particle /> */}
       <Container>
         <Row style={{ justifyContent: "center", padding: "10px" }}>
           <Col
